@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 export default function EmployeeTable() {
   const [employees, setEmployees] = useState([]);
   const [expandedProfile, setExpandedProfile] = useState(null);
+  const [showMessage, setShowMessage] = useState(false);
 
   const fetchEmployees = async () => {
     try {
@@ -26,13 +27,19 @@ export default function EmployeeTable() {
   }, []);
 
   const handleEdit = (id) => {
-    // Implement edit functionality
-    console.log('Edit employee with id:', id);
+    // Show message for admin signup required
+    setShowMessage(true);
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 3000); // Hide after 3 seconds
   };
 
   const handleDelete = (id) => {
-    // Implement delete functionality
-    console.log('Delete employee with id:', id);
+    // Show message for admin signup required
+    setShowMessage(true);
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 3000); // Hide after 3 seconds
   };
 
   const toggleProfile = (id) => {
@@ -40,7 +47,12 @@ export default function EmployeeTable() {
   };
 
   return (
-    <div className='overflow-x-auto'>
+    <div className='relative overflow-x-auto'>
+      {showMessage && (
+        <div className='absolute top-0 right-0 mt-4 mr-4 bg-yellow-200 text-yellow-800 p-3 rounded-lg shadow-lg'>
+          Admin signup required
+        </div>
+      )}
       <table className='min-w-full bg-white'>
         <thead>
           <tr>
@@ -112,7 +124,7 @@ export default function EmployeeTable() {
                         <img
                           src={emp.profilePic}
                           alt={`${emp.name}'s profile`}
-                          className='w-44  rounded-md object-cover'
+                          className='w-44 rounded-md object-cover'
                         />
                       </div>
                     </div>

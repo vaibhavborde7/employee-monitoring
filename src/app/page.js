@@ -12,7 +12,7 @@ const Page = () => {
       <Hero />
 
       <h1 className='text-4xl font-bold text-center py-6 shadow-lg  text-black rounded-lg'>
-        This Week's Best Performers
+        Best Performers This Week
       </h1>
       <Card />
 

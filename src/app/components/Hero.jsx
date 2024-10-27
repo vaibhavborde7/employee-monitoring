@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 const Hero = () => {
   return (
     <div className='p-10 bg-black text-white mx-auto rounded-b-2xl'>
@@ -9,7 +9,7 @@ const Hero = () => {
           <h2 className='text-xl font-mono'>This is the Hall of Fame</h2>
         </div>
         <div className='flex-shrink-0'>
-          <img src="runner.gif" alt="Runner" className='w-60' />
+          <Image src="runner.gif" alt="Runner" className='w-60' />
         </div>
       </div>
       

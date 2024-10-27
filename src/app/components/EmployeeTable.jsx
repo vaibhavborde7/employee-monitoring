@@ -56,7 +56,7 @@ export default function EmployeeTable() {
       <table className='min-w-full bg-white'>
         <thead>
           <tr>
-            <th className='py-2 text-left align-top'>Profile</th>
+            <th className='py-2 text-left align-top'>Click Profile</th>
             <th className='py-2 text-left align-top'>Name</th>
             <th className='py-2 text-left align-top'>ID</th>
             <th className='py-2 text-left align-top'>Contact</th>

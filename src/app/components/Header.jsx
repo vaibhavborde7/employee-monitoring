@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import img from "next/img";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
       <header>
         <div className="bg-black p-5 flex justify-between items-center h-24">
           <div className="flex items-center space-x-4">
-            <Image src="/eslogo.jpg" alt="Logo" width={70} height={70} />
+            <img src="/eslogo.jpg" alt="Logo" width={70} height={70} />
             <h1 className="text-white text-3xl font-mono">The Employers</h1>
           </div>
           <div className="text-white flex items-center space-x-4">

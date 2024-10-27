@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+// import img from 'next/img';
 export default function Card() {
   const [employees, setEmployees] = useState([]);
 
@@ -35,7 +35,7 @@ export default function Card() {
             className='bg-gray-100 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105'
           >
             <div className='flex justify-center mb-4'>
-              <Image
+              <img
                 src={emp.profilePic}
                 alt={`${emp.name}'s profile`}
                 className='w-24 h-24 rounded-full object-cover'

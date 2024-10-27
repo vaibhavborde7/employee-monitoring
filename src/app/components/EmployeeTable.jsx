@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+// import img from 'next/img';
 export default function EmployeeTable() {
   const [employees, setEmployees] = useState([]);
   const [expandedProfile, setExpandedProfile] = useState(null);
@@ -69,7 +69,7 @@ export default function EmployeeTable() {
             <React.Fragment key={emp.id}>
               <tr className='border-b'>
                 <td className='py-2'>
-                  <Image
+                  <img
                     src={emp.profilePic}
                     alt={`${emp.name}'s profile`}
                     className='w-12 h-12 rounded-full object-cover cursor-pointer'
@@ -101,7 +101,7 @@ export default function EmployeeTable() {
                     <div
                       className='p-4 rounded-lg flex items-center'
                       style={{
-                        backgroundImage: 'url("wave.gif")',
+                        backgroundimg: 'url("wave.gif")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                       }}
@@ -114,14 +114,14 @@ export default function EmployeeTable() {
                         {/* Add more details if needed */}
                       </div>
                       <div className='flex-grow'>
-                        <Image
+                        <img
                           src='perform.png'
                           alt={`${emp.name}'s profile`}
                           className='w-100 rounded-lg object-cover opacity-80'
                         />
                       </div>
                       <div className='flex-grow text-right'>
-                        <Image
+                        <img
                           src={emp.profilePic}
                           alt={`${emp.name}'s profile`}
                           className='w-44 rounded-md object-cover'
